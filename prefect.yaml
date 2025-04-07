@@ -1,0 +1,22 @@
+
+name: etl-penetracion-creditos
+version: 1.0
+description: Flujo ETL para analizar la penetración de créditos en factura de gas
+entrypoint: src/etl_pipeline.py:etl_pipeline
+
+# Simulación de configuración de despliegue para producción
+work_pool:
+  name: prod-pool
+  work_queue_name: default
+  job_variables:
+    image: "prefecthq/prefect:2-latest"
+    env:
+      PREFECT_API_KEY: "prefect-api-key-1234"
+      PREFECT_API_URL: "https://api.prefect.cloud/api/accounts/mi-cuenta/workspaces/etl-prod"
+
+schedules:
+  cron:
+    cron: "0 6 * * *"
+    timezone: "America/Bogota"
+    day_or: true
+    description: "Ejecución diaria a las 6:00 AM"
