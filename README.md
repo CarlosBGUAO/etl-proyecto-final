@@ -2,7 +2,14 @@
 
 Este repositorio contiene el código fuente, análisis exploratorio y visualizaciones para un pipeline ETL enfocado en el análisis de penetración de créditos en la factura de gas. Se utilizan herramientas como Python, Pandas, SQLite, Prefect y visualización con Matplotlib/Seaborn.
 
+🧪 Créditos
+Proyecto desarrollado por:
 
+Carlos Becerra (22500215)
+
+Viviana Valle Fernández (22500240)
+
+Curso de ETL – MIA – UAO 2025
 ---
 
 ## ⏱️ Automatización con Prefect
